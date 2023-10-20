@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>DataOn Corp</title>
+        <meta charset="UTF-8" />
+    </head>
+<body>
+    <h3>PT. Indodev Niaga Internet</h3>   
+
+   <h2>Edit Code and Name</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .id }}" />
+      <label> Code </label><input type="text" name="code" value="{{ .code }}"  /><br />
+      <label> Name </label><input type="text" name="name" value="{{ .name }}"  /><br />
+      <input type="submit" value="Save" />
+    </form><br />    
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>DataOn Corp</title>
+        <meta charset="UTF-8" />
+    </head>
+<body>
+    <h3>PT. Indodev Niaga Internet</h3>   
+
+    <button><a href="/new">Add</a></button><br>
+    
+
+    <ul>
+    {{ range . }}
+      
+    <li><a tabindex="-1" href="#" id="">{{.}} </a> 
+        <div class="col-auto m-1 p-0 todo-actions">
+            <div class="row d-flex align-items-center justify-content-end">
+                <p class="m-0 p-0 px-2">
+                    <a href="/edit?id={{ .id }}">Edit</a>
+                </p>
+                <p class="m-0 p-0 px-2">
+                    <a href="/delete?id={{ .id }}">Delete</a>
+                </p>
+            </div>
+        </div>
+    </li>
+        <!-- <li><a href="/show?id={{ .id }}">View</a></li>
+        <li><a href="/edit?id={{ .id }}">Edit</a></li>
+        <li><a href="/delete?id={{ .id }}">Delete</a></li> -->
+        
+      
+    {{ end }}
+    </ul>
+    </div>
+
+<script>
+    $(document).ready(function(){
+        $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+        });
+    });
+</script>
+</body>
+</html>

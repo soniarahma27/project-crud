@@ -1,0 +1,43 @@
+{{ define "Index" }}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>DataOn Corp</title>
+        <meta charset="UTF-8" />
+    </head>
+<body>
+    <h1>PT. Indodev Niaga Internet</h1>   
+
+    <h2> Registered </h2>
+    <h3>TEST</h3>
+    <button><a href="/new">Add</a></button>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Code</td>
+        <td>Name</td>
+        <td>View</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+       </thead>
+       <tbody>
+   
+       </tbody>
+    </table>
+    <div>
+    <h4>test test</h4>
+    {{ range . }}
+      <ul>
+        <li><p>{{ .id }} {{ .code }} {{ .name }}</p></li>
+        <li><a href="/show?id={{ .id }}">View</a></li>
+        <li><a href="/edit?id={{ .id }}">Edit</a></li>
+        <li><a href="/delete?id={{ .id }}">Delete</a></li>
+        
+      </tr>
+    {{ end }}
+    </div>
+</body>
+</html>
+{{ end }}
